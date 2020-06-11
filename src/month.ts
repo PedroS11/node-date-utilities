@@ -40,7 +40,7 @@ Date.prototype.subtractMonth = function (): Date {
  */
 Date.prototype.getDaysInMonth = function (year: number, month: number): number {
   if (month === 1) {
-    return Date.prototype.isLeapYear(year) ? 29 : 28;
+    return Date.isLeapYear(year) ? 29 : 28;
   }
   return daysInMonth[month];
 };
