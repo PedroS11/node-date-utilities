@@ -1,4 +1,4 @@
-import "./@types/date.d";
+import "./types/date";
 
 /**
  Add a specific number of days to the current Date instance

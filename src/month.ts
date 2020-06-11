@@ -1,4 +1,5 @@
-import "./@types/date.d";
+import "./types/date";
+import { daysInMonth } from "./types/date";
 
 /**
  Add a specific number of months to the current Date instance

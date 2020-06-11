@@ -1,4 +1,3 @@
-import "../@types/date.d";
 import "../day";
 
 describe("Date", () => {

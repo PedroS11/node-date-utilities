@@ -1,7 +1,8 @@
-import "./@types/date.d";
+import "./types/date";
 import "./day";
 import "./month";
 import "./year";
+import { AddSubOptions } from "./types/date";
 
 /**
  Add a specific number of days/months/years to the current Date instance
