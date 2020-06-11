@@ -9,6 +9,12 @@ export interface AddSubOptions {
 declare global {
   export interface DateConstructor {
     isLeapYear(year: number): boolean;
+
+    getDaysInMonth(year: number, month: number): number;
+
+    tomorrow(): Date;
+
+    sameDay(date1: Date, date2: Date): boolean;
   }
 
   export interface Date {
@@ -41,9 +47,5 @@ declare global {
     subtractYear(): Date;
 
     isLeapYear(): boolean;
-
-    tomorrow(): Date;
-
-    getDaysInMonth(year: number, month: number): number;
   }
 }

@@ -5,7 +5,7 @@ import "./types/date";
  @param {number} days - The number of days to be added
  */
 Date.prototype.addDays = function (days: number): Date {
-  this.setDate(this.getDate() + days);
+  this.setDate(this.getDate() + Math.abs(days));
   return this;
 };
 
@@ -21,7 +21,7 @@ Date.prototype.addDay = function (): Date {
  @param {number} days - The number of days to be subtracted
  */
 Date.prototype.subtractDays = function (days: number): Date {
-  this.setDate(this.getDate() - days);
+  this.setDate(this.getDate() - Math.abs(days));
   return this;
 };
 
@@ -30,4 +30,11 @@ Date.prototype.subtractDays = function (days: number): Date {
  */
 Date.prototype.subtractDay = function (): Date {
   return this.subtractDays(1);
+};
+
+/**
+ * Returns a Date instance from the next day
+ */
+Date.tomorrow = function () {
+  return new Date().addDay();
 };

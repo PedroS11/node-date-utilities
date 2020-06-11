@@ -15,7 +15,8 @@
     "build": "tsc",
     "prepare": "npm run build",
     "lint": "eslint '*/**/*.ts' --fix",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "husky": {
     "hooks": {

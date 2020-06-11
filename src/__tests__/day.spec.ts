@@ -1,6 +1,6 @@
-import "../day";
+import "../index";
 
-describe("Date", () => {
+describe("Day methods", () => {
   const date = new Date("1995-12-17T03:24:00");
 
   it("should increment one day", () => {

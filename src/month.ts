@@ -1,4 +1,3 @@
-import "./types/date";
 import { daysInMonth } from "./types/date";
 
 /**
@@ -6,7 +5,7 @@ import { daysInMonth } from "./types/date";
  @param {number} months - The number of months to be added
  */
 Date.prototype.addMonths = function (months: number): Date {
-  this.setMonth(this.getMonth() + months);
+  this.setMonth(this.getMonth() + Math.abs(months));
   return this;
 };
 
@@ -22,7 +21,7 @@ Date.prototype.addMonth = function (): Date {
  @param {number} months - The number of months to be subtracted
  */
 Date.prototype.subtractMonths = function (months: number): Date {
-  this.setMonth(this.getMonth() - months);
+  this.setMonth(this.getMonth() - Math.abs(months));
   return this;
 };
 
@@ -38,7 +37,11 @@ Date.prototype.subtractMonth = function (): Date {
  * @param {number} year - The year to be considered
  * @param {number} month - The month to be analysed
  */
-Date.prototype.getDaysInMonth = function (year: number, month: number): number {
+Date.getDaysInMonth = function (year: number, month: number): number {
+  if (!daysInMonth[month]) {
+    throw new Error(`Invalid month value '${month}'`);
+  }
+
   if (month === 1) {
     return Date.isLeapYear(year) ? 29 : 28;
   }

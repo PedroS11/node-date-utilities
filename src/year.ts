@@ -5,7 +5,7 @@ import "./types/date";
  @param {number} years - The number of years to be added
  */
 Date.prototype.addYears = function (years: number): Date {
-  this.setFullYear(this.getFullYear() + years);
+  this.setFullYear(this.getFullYear() + Math.abs(years));
   return this;
 };
 
@@ -21,7 +21,7 @@ Date.prototype.addYear = function (): Date {
  @param {number} years - The number of years to be subtracted
  */
 Date.prototype.subtractYears = function (years: number): Date {
-  this.setFullYear(this.getFullYear() - years);
+  this.setFullYear(this.getFullYear() - Math.abs(years));
   return this;
 };
 
@@ -37,11 +37,14 @@ Date.prototype.subtractYear = function (): Date {
  * @param {number} year - Year to be checked
  */
 Date.isLeapYear = function (year: number): boolean {
+  if (year < 0) {
+    throw new Error(`Invalid year value '${year}'`);
+  }
   return new Date(year, 1, 29).getDate() === 29;
 };
 
 /**
- * Check if the instance Date corresponds a leap year
+ * Check if the Date instance corresponds a leap year
  */
 Date.prototype.isLeapYear = function (): boolean {
   return this.getDate() === 29;
