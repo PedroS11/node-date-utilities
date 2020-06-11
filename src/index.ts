@@ -26,7 +26,7 @@ interface Date {
   subtractYear(): Date;
 
   isLeapYear(year: number): boolean;
-
+  tomorrow(): Date;
   getDaysInMonth(year: number, month: number): number;
 }
 
@@ -170,6 +170,13 @@ Date.prototype.subtractYear = function (): Date {
  */
 Date.prototype.isLeapYear = function (year: number): boolean {
   return new Date(year, 1, 29).getDate() === 29;
+};
+
+/**
+ * Returns a Date instance from the next day
+ */
+Date.prototype.tomorrow = function () {
+  return this.addDay();
 };
 
 /**
