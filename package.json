@@ -1,5 +1,5 @@
 {
-  "name": "node-date-utils",
+  "name": "node-date-utilities",
   "version": "0.0.1",
   "description": "A Date wrapper with some extra functionalities",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PedroS11/node-date-utils.git"
+    "url": "git+https://github.com/PedroS11/node-date-utilities.git"
   },
   "scripts": {
     "build": "tsc",
