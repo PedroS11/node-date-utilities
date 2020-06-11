@@ -3,7 +3,6 @@ import { daysInMonth } from "./types/date";
 
 /**
  Add a specific number of months to the current Date instance
- @static
  @param {number} months - The number of months to be added
  */
 Date.prototype.addMonths = function (months: number): Date {
@@ -13,7 +12,6 @@ Date.prototype.addMonths = function (months: number): Date {
 
 /**
  Add one month to the current Date instance
- @static
  */
 Date.prototype.addMonth = function (): Date {
   return this.addMonths(1);
@@ -21,7 +19,6 @@ Date.prototype.addMonth = function (): Date {
 
 /**
  Subtract a specific number of months to the current Date instance
- @static
  @param {number} months - The number of months to be subtracted
  */
 Date.prototype.subtractMonths = function (months: number): Date {
@@ -31,7 +28,6 @@ Date.prototype.subtractMonths = function (months: number): Date {
 
 /**
  Subtract one month to the current Date instance
- @static
  */
 Date.prototype.subtractMonth = function (): Date {
   return this.subtractMonths(1);

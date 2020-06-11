@@ -7,6 +7,10 @@ export interface AddSubOptions {
 }
 
 declare global {
+  export interface DateConstructor {
+    isLeapYear(year: number): boolean;
+  }
+
   export interface Date {
     add(options: AddSubOptions): Date;
 
@@ -36,7 +40,7 @@ declare global {
 
     subtractYear(): Date;
 
-    isLeapYear(year: number): boolean;
+    isLeapYear(): boolean;
 
     tomorrow(): Date;
 
