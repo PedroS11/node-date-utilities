@@ -1,12 +1,16 @@
 {
   "name": "node-date-utils",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A Date wrapper with some extra functionalities",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PedroS11/node-date-utils.git"
+  },
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
@@ -30,11 +34,15 @@
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.ts$",
     "moduleFileExtensions": [
       "ts",
-      "js"
+      "js",
+      "d.ts"
     ]
   },
-  "author": "Pedro Silva",
+  "author": "Pedro Silva <pedrosilva1137@gmail.com>",
   "license": "ISC",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.0",
     "@types/node": "^14.0.13",
