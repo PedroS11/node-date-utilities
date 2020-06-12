@@ -1,5 +1,5 @@
 # node-date-utilities
-![npm](https://img.shields.io/npm/v/node-date-utilities)
+[![npm version](https://badge.fury.io/js/node-date-utilities.svg)](https://badge.fury.io/js/node-date-utilities)
 [![Build Status](https://travis-ci.org/PedroS11/node-date-utilities.svg?branch=master)](https://travis-ci.org/PedroS11/node-date-utilities)
 [![Coverage Status](https://coveralls.io/repos/github/PedroS11/node-date-utilities/badge.svg?branch=master)](https://coveralls.io/github/PedroS11/node-date-utilities?branch=master)
 ![GitHub repo size](https://img.shields.io/github/repo-size/PedroS11/node-date-utilities)
