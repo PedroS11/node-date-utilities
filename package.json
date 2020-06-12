@@ -1,6 +1,6 @@
 {
   "name": "node-date-utilities",
-  "version": "0.0.12",
+  "version": "1.0.0",
   "description": "A module that adds new methods to the native Date class.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
