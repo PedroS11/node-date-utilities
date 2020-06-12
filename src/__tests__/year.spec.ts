@@ -4,22 +4,22 @@ describe("Year methods", () => {
   const date = new Date("1995-12-17T03:24:00");
 
   it("should increment one month", () => {
-    date.addYear();
+    date.addSubtractYears(1);
     expect(date.getFullYear()).toBe(1996);
   });
 
   it("should increment n months", () => {
-    date.addYears(2);
+    date.addSubtractYears(2);
     expect(date.getFullYear()).toBe(1998);
   });
 
   it("should subtract one month", () => {
-    date.subtractYear();
+    date.addSubtractYears(-1);
     expect(date.getFullYear()).toBe(1997);
   });
 
   it("should subtract n months", () => {
-    date.subtractYears(2);
+    date.addSubtractYears(-2);
     expect(date.getFullYear()).toBe(1995);
   });
 

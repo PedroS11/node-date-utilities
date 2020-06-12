@@ -1,35 +1,12 @@
 import "./types/date";
 
 /**
- Add a specific number of years to the current Date instance
- @param {number} years - The number of years to be added
+ Add/Subtract a specific number of years to the current Date instance
+ @param {number} years - The number of years to be added/subtracted
  */
-Date.prototype.addYears = function (years: number): Date {
-  this.setFullYear(this.getFullYear() + Math.abs(years));
+Date.prototype.addSubtractYears = function (years: number): Date {
+  this.setFullYear(this.getFullYear() + years);
   return this;
-};
-
-/**
- Add one year to the current Date instance
- */
-Date.prototype.addYear = function (): Date {
-  return this.addYears(1);
-};
-
-/**
- Subtract a specific number of years to the current Date instance
- @param {number} years - The number of years to be subtracted
- */
-Date.prototype.subtractYears = function (years: number): Date {
-  this.setFullYear(this.getFullYear() - Math.abs(years));
-  return this;
-};
-
-/**
- Subtract one year to the current Date instance
- */
-Date.prototype.subtractYear = function (): Date {
-  return this.subtractYears(1);
 };
 
 /**

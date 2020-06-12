@@ -14,6 +14,9 @@
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
+    "release:major": "npm version major && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:patch": "npm version patch && npm publish",
     "lint": "eslint '*/**/*.ts' --fix",
     "test": "jest",
     "test:coverage": "jest --coverage"
@@ -25,7 +28,8 @@
   },
   "lint-staged": {
     "*.{js,ts}": [
-      "eslint --fix"
+      "eslint --fix",
+      "jest"
     ]
   },
   "jest": {

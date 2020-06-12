@@ -1,21 +1,21 @@
 import "../index";
 
 describe("Common methods", () => {
-  describe("add", () => {
+  describe("addSubtract", () => {
     it("should add days/months/years to a date", () => {
       const date = new Date("1995-02-17T03:24:00");
 
-      date.add({
+      date.addSubtract({
         days: 1,
       });
       expect(date.getDate()).toBe(18);
 
-      date.add({
+      date.addSubtract({
         months: 1,
       });
       expect(date.getMonth()).toBe(2);
 
-      date.add({
+      date.addSubtract({
         years: 1,
       });
       expect(date.getFullYear()).toBe(1996);
@@ -25,18 +25,18 @@ describe("Common methods", () => {
   it("should subtract days/months/years to a date", () => {
     const date = new Date("1995-02-17T03:24:00");
 
-    date.subtract({
-      days: 1,
+    date.addSubtract({
+      days: -1,
     });
     expect(date.getDate()).toBe(16);
 
-    date.subtract({
-      months: 1,
+    date.addSubtract({
+      months: -1,
     });
     expect(date.getMonth()).toBe(0);
 
-    date.subtract({
-      years: 1,
+    date.addSubtract({
+      years: -1,
     });
     expect(date.getFullYear()).toBe(1994);
   });

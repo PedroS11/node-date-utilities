@@ -14,37 +14,19 @@ declare global {
 
     tomorrow(): Date;
 
+    yesterday(): Date;
+
     sameDay(date1: Date, date2: Date): boolean;
   }
 
   export interface Date {
-    add(options: AddSubOptions): Date;
+    addSubtract(options: AddSubOptions): Date;
 
-    subtract(options: AddSubOptions): Date;
+    addSubtractDays(days: number): Date;
 
-    addDays(days: number): Date;
+    addSubtractMonths(months: number): Date;
 
-    addDay(): Date;
-
-    subtractDays(days: number): Date;
-
-    subtractDay(): Date;
-
-    addMonths(months: number): Date;
-
-    addMonth(): Date;
-
-    subtractMonths(months: number): Date;
-
-    subtractMonth(): Date;
-
-    addYears(years: number): Date;
-
-    addYear(): Date;
-
-    subtractYears(years: number): Date;
-
-    subtractYear(): Date;
+    addSubtractYears(years: number): Date;
 
     isLeapYear(): boolean;
   }
