@@ -24,3 +24,15 @@ Date.sameDay = function (date1: Date, date2: Date): boolean {
     date1.getFullYear() === date2.getFullYear()
   );
 };
+
+/**
+ * Sets the time part to 00:00:00:0000
+ */
+Date.prototype.clearTime = function (): Date {
+  this.setHours(0);
+  this.setMinutes(0);
+  this.setSeconds(0);
+  this.setMilliseconds(0);
+
+  return this;
+};

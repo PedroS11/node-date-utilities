@@ -24,4 +24,30 @@ describe("Day methods", () => {
       expect(date.getDate()).toBe(17);
     });
   });
+
+  it("tomorrow", () => {
+    const current = new Date();
+    const tomorrow = Date.tomorrow();
+
+    current.clearTime();
+    tomorrow.clearTime();
+
+    expect(
+      tomorrow.valueOf() / 1000 / 60 / 60 / 24 -
+        current.valueOf() / 1000 / 60 / 60 / 24
+    ).toBe(1);
+  });
+
+  it("yesterday", () => {
+    const current = new Date();
+    const yesterday = Date.yesterday();
+
+    current.clearTime();
+    yesterday.clearTime();
+
+    expect(
+      current.valueOf() / 1000 / 60 / 60 / 24 -
+        yesterday.valueOf() / 1000 / 60 / 60 / 24
+    ).toBe(1);
+  });
 });

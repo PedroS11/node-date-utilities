@@ -25,6 +25,8 @@ A module that adds new methods to the native Date class.
       - [Example use](#example-use-8)
     + [isLeapYear(): Boolean](#isleapyear----boolean)
       - [Example use](#example-use-9)
+    + [clearTime(): Date](#cleartime----date)
+      - [Example use](#example-use-10)
 - [Test](#test)
   
 ## Installation 
@@ -166,6 +168,19 @@ const date = new Date("1995-02-17T03:24:00");
 
 date.isLeapYear(); // false
 ```
+
+#### clearTime(): Date
+
+Removes the time part from a Date instance
+
+##### Example use
+```
+const date = new Date("1995-02-17T03:24:00");
+
+date.clearTime(); // 1995-02-17T00:00:00.0000
+```
+
+
 
 ## Test 
 ```sh

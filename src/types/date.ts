@@ -29,5 +29,7 @@ declare global {
     addSubtractYears(years: number): Date;
 
     isLeapYear(): boolean;
+
+    clearTime(): Date;
   }
 }

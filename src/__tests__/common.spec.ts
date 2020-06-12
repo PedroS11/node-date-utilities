@@ -47,4 +47,15 @@ describe("Common methods", () => {
 
     expect(Date.sameDay(date1, date2)).toBeTruthy;
   });
+
+  it("should remove the time from the a Date instance", () => {
+    const date = new Date("1995-02-17T03:24:00");
+
+    date.clearTime();
+
+    expect(date.getHours()).toBe(0);
+    expect(date.getMinutes()).toBe(0);
+    expect(date.getSeconds()).toBe(0);
+    expect(date.getMilliseconds()).toBe(0);
+  });
 });
