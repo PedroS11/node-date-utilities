@@ -1,4 +1,9 @@
 # node-date-utilities
+![npm](https://img.shields.io/npm/v/node-date-utilities)
+[![Build Status](https://travis-ci.org/PedroS11/node-date-utilities.svg?branch=master)](https://travis-ci.org/PedroS11/node-date-utilities)
+[![Coverage Status](https://coveralls.io/repos/github/PedroS11/node-date-utilities/badge.svg?branch=master)](https://coveralls.io/github/PedroS11/node-date-utilities?branch=master)
+![GitHub repo size](https://img.shields.io/github/repo-size/PedroS11/node-date-utilities)
+
 A module that adds new methods to the native Date class. 
 - [Installation](#installation)
 - [Usage](#usage)

@@ -1,7 +1,7 @@
 {
   "name": "node-date-utilities",
   "version": "0.0.9",
-  "description": "A Date wrapper with some extra functionalities",
+  "description": "A module that adds new methods to the native Date class.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -13,14 +13,18 @@
   },
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build",
-    "release:major": "npm version major && npm publish",
-    "release:minor": "npm version minor && npm publish",
-    "release:patch": "npm version patch && npm publish",
-    "cover": "istanbul cover npm run test:coverage",
+    "ci": "npm run lint && npm run build && npm run cover",
     "lint": "eslint '*/**/*.ts' --fix",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run ci",
+    "preversion": "npm run ci",
+    "postversion": "git push && git push --tags",
+    "cover": "istanbul cover npm run test:coverage",
+    "release:major": "npm version major && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:patch": "npm version patch && npm publish"
   },
   "husky": {
     "hooks": {
@@ -50,6 +54,7 @@
     "access": "public"
   },
   "devDependencies": {
+    "@types/istanbul": "^0.4.30",
     "@types/jest": "^26.0.0",
     "@types/node": "^14.0.13",
     "@typescript-eslint/eslint-plugin": "^3.2.0",
