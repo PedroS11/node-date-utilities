@@ -1,5 +1,32 @@
 # node-date-utilities
 A module that adds new methods to the native Date class. 
+- [Installation](#installation)
+- [Usage](#usage)
+- [Methods](#methods)
+  * [Static methods](#static-methods)
+    + [Date.isLeapYear(year: number): Boolean](#dateisleapyear-year--number---boolean)
+      - [Example use](#example-use)
+    + [Date.getDaysInMonth(year: number, month: number): number](#dategetdaysinmonth-year--number--month--number---number)
+      - [Example use](#example-use-1)
+    + [Date.tomorrow(): Date](#datetomorrow----date)
+      - [Example use](#example-use-2)
+    + [Date.yesterday(): Date](#dateyesterday----date)
+      - [Example use](#example-use-3)
+    + [Date.sameDay(date1: Date, date2: Date): boolean](#datesameday-date1--date--date2--date---boolean)
+      - [Example use](#example-use-4)
+  * [Instance methods](#instance-methods)
+    + [addSubtract(options: AddSubOptions): Date;](#addsubtract-options--addsuboptions---date-)
+      - [Example use](#example-use-5)
+    + [addSubtractDays(days: number): Date;](#addsubtractdays-days--number---date-)
+      - [Example use](#example-use-6)
+    + [addSubtractMonths(months: number): Date;](#addsubtractmonths-months--number---date-)
+      - [Example use](#example-use-7)
+    + [addSubtractYears(years: number): Date;](#addsubtractyears-years--number---date-)
+      - [Example use](#example-use-8)
+    + [isLeapYear(): Boolean](#isleapyear----boolean)
+      - [Example use](#example-use-9)
+- [Test](#test)
+  
 ## Installation 
 ```sh
 npm install node-date-utilities
@@ -70,8 +97,8 @@ const date2 = new Date("1995-02-17T12:24:00");
 Date.sameDay(date1, date2) // true
 ```
 
-## Instance methods
-### addSubtract(options: AddSubOptions): Date;
+### Instance methods
+#### addSubtract(options: AddSubOptions): Date;
 
 Adds a specific number of days/months/years to the current Date instance
 -   **options:** AddSubOptions values to be added/subtracted
@@ -92,7 +119,7 @@ date.addSubtract({months: -1}); // 1995-01-18T03:24:00
 date.addSubtract({years: 1}); // 1996-01-18T03:24:00
 ```
 
-### addSubtractDays(days: number): Date;
+#### addSubtractDays(days: number): Date;
 
 Adds a specific number of days to the current Date instance
 -   **days:** {number} number of days to be added/subtracted
@@ -104,7 +131,7 @@ const date = new Date("1995-02-17T03:24:00");
 date.addSubtractDays(1); // 1995-02-18T03:24:00
 ```
 
-### addSubtractMonths(months: number): Date;
+#### addSubtractMonths(months: number): Date;
 
 Adds a specific number of months to the current Date instance
 -   **months:** {number} number of months to be added/subtracted
@@ -117,7 +144,7 @@ date.addSubtractMonths(1); // 1995-03-187T03:24:00
 ```
 
 
-### addSubtractYears(years: number): Date;
+#### addSubtractYears(years: number): Date;
 
 Adds a specific number of years to the current Date instance
 -   **years:** {number} number of years to be added/subtracted
@@ -129,7 +156,7 @@ const date = new Date("1995-02-17T03:24:00");
 date.addSubtractYearss(1); // 1996-02-187T03:24:00
 ```
 
-### isLeapYear(): Boolean
+#### isLeapYear(): Boolean
 
 Checks if the current Date instance is a leap year
 
