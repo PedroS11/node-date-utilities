@@ -40,6 +40,12 @@
   "publishConfig": {
     "access": "public"
   },
+  "keywords": [
+    "date",
+    "utils",
+    "javascript",
+    "typescript"
+  ],
   "devDependencies": {
     "@types/istanbul": "^0.4.30",
     "@types/jest": "^26.0.0",
