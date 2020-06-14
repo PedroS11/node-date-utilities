@@ -30,20 +30,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts}": [
+    "*.{ts}": [
       "eslint --fix",
       "jest"
-    ]
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.ts$": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.ts$",
-    "moduleFileExtensions": [
-      "ts",
-      "js",
-      "d.ts"
     ]
   },
   "author": "Pedro Silva <pedrosilva1137@gmail.com>",
