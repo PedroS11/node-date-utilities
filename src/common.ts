@@ -1,16 +1,7 @@
 import { AddSubOptions } from "./types/date";
-
-/**
- Add/Subtract a specific number of days/months/years to the current Date instance
- @param {AddSubOptions} options - The values to be added/subtracted
- */
-Date.prototype.addSubtract = function (options: AddSubOptions): Date {
-  if (options.days) this.addSubtractDays(options.days);
-  if (options.months) this.addSubtractMonths(options.months);
-  if (options.years) this.addSubtractYears(options.years);
-
-  return this;
-};
+import {addSubtractDays} from "./day";
+import {addSubtractYears} from "./year";
+import {addSubtractMonths} from "./month";
 
 /**
  * Check if two dates are the same day
@@ -35,4 +26,38 @@ Date.prototype.clearTime = function (): Date {
   this.setMilliseconds(0);
 
   return this;
+};
+
+/**
+ Add/Subtract a specific number of days/months/years to the current Date instance
+ @param {Date} date - The date instance
+ @param {AddSubOptions} options - The values to be added/subtracted
+ @param {number} direction - 1 if sum, -1 if subtract
+ */
+function addSubtract(date: Date, options: AddSubOptions, direction: number): Date {
+  if (options.days) addSubtractDays(date, Math.abs(options.days) * direction);
+  if (options.months) addSubtractMonths(date, Math.abs(options.months) * direction);
+  if (options.years) addSubtractYears(date, Math.abs(options.years) * direction);
+
+  return date;
+}
+
+/**
+ Add a specific number of days/months/years to the current Date instance
+ @param {AddSubOptions} options - The values to be added
+ */
+Date.prototype.add = function (options: AddSubOptions) {
+  return addSubtract(this, options, 1);
+};
+
+/**
+ Subtract a specific number of days/months/years to the current Date instance
+ @param {AddSubOptions} options - The values to be subtracted
+ */
+Date.prototype.subtract = function (options: AddSubOptions) {
+  return addSubtract(this, options, -1);
+};
+
+Date.prototype.clone = function (): Date {
+  return new Date(this.valueOf());
 };

@@ -1,6 +1,10 @@
 export const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 export interface AddSubOptions {
+  // milliseconds?: number;
+  // seconds?: number;
+  // minutes?: number;
+  hours?: number;
   days?: number;
   months?: number;
   years?: number;
@@ -20,13 +24,10 @@ declare global {
   }
 
   export interface Date {
-    addSubtract(options: AddSubOptions): Date;
-
-    addSubtractDays(days: number): Date;
-
-    addSubtractMonths(months: number): Date;
-
-    addSubtractYears(years: number): Date;
+    add(options: AddSubOptions): Date;
+    subtract(options: AddSubOptions): Date;
+    getDaysInMonth(): number;
+    clone(): Date;
 
     isLeapYear(): boolean;
 
