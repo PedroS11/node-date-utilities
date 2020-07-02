@@ -18,7 +18,7 @@ Date.isLeapYear = function (year: number): boolean {
   if (year < 0) {
     throw new Error(`Invalid year value '${year}'`);
   }
-  return !((year % 4) || (!(year % 100) && (year % 400)));
+  return !(year % 4 || (!(year % 100) && year % 400));
 };
 
 /**

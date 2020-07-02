@@ -1,7 +1,7 @@
 import { AddSubOptions } from "./types/date";
-import {addSubtractDays} from "./day";
-import {addSubtractYears} from "./year";
-import {addSubtractMonths} from "./month";
+import { addSubtractDays } from "./day";
+import { addSubtractYears } from "./year";
+import { addSubtractMonths } from "./month";
 
 /**
  * Check if two dates are the same day
@@ -34,10 +34,16 @@ Date.prototype.clearTime = function (): Date {
  @param {AddSubOptions} options - The values to be added/subtracted
  @param {number} direction - 1 if sum, -1 if subtract
  */
-function addSubtract(date: Date, options: AddSubOptions, direction: number): Date {
+function addSubtract(
+  date: Date,
+  options: AddSubOptions,
+  direction: number
+): Date {
   if (options.days) addSubtractDays(date, Math.abs(options.days) * direction);
-  if (options.months) addSubtractMonths(date, Math.abs(options.months) * direction);
-  if (options.years) addSubtractYears(date, Math.abs(options.years) * direction);
+  if (options.months)
+    addSubtractMonths(date, Math.abs(options.months) * direction);
+  if (options.years)
+    addSubtractYears(date, Math.abs(options.years) * direction);
 
   return date;
 }

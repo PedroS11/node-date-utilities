@@ -1,5 +1,5 @@
 import "../index";
-import {addSubtractMonths} from "../month";
+import { addSubtractMonths } from "../month";
 
 describe("Month methods", () => {
   describe("addSubtractMonths", () => {
@@ -35,10 +35,10 @@ describe("Month methods", () => {
 
     it("should throw an error if the month is not valid", () => {
       expect(() => Date.getDaysInMonth(2000, -1)).toThrow(
-          `Invalid month value '${-1}'`
+        `Invalid month value '${-1}'`
       );
       expect(() => Date.getDaysInMonth(2000, 12)).toThrow(
-          `Invalid month value '${12}'`
+        `Invalid month value '${12}'`
       );
     });
   });

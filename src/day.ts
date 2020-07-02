@@ -21,12 +21,12 @@ export const addSubtractDays = function (date: Date, days: number): Date {
  * Returns a Date instance from the next day
  */
 Date.tomorrow = function (): Date {
-  return addSubtractDays(new Date(),1);
+  return addSubtractDays(new Date(), 1);
 };
 
 /**
  * Returns a Date instance from the previous day
  */
 Date.yesterday = function (): Date {
-  return addSubtractDays(new Date(),-1);
+  return addSubtractDays(new Date(), -1);
 };
